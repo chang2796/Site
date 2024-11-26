@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <style>
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="openGame()">Open Interstellar</button>
+    <script>
+        function openGame() {
+            var win = window.open();
+            var url = "https://tfs62-us61-sxtsk73.up.railway.app/";
+            var iframe = win.document.createElement('iframe');
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+        }
+    </script>
+</body>
+
+</html>
