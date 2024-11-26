@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        .login-container {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input {
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            width: 100%;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .message {
-            margin-top: 10px;
-            color: red;
-        }
-    </style>
-</head>
-<body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username" />
-        <input type="password" id="password" placeholder="Password" />
-        <button onclick="login()">Login</button>
-        <div class="message" id="message"></div>
-    </div>
 
-    <script>
-        function login() {
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Page</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+
+		.login-container {
+			background: white;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		input {
+			margin: 10px 0;
+			padding: 10px;
+			width: 100%;
+		}
+
+		button {
+			padding: 10px;
+			width: 100%;
+			background-color: #007BFF;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #0056b3;
+		}
+
+		.message {
+			margin-top: 10px;
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="login-container">
+		<h2>Login</h2>
+		<input type="text" id="username" placeholder="Username" />
+		<input type="password" id="password" placeholder="Password" />
+		<button onclick="login()">Login</button>
+		<div class="message" id="message"></div>
+	</div>
+
+	<script>
+		function login() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const message = document.getElementById('message');
@@ -62,12 +67,11 @@
             if (username === 'Public' && password === 'pass1') {
                 message.textContent = 'Welcome!';
                 document.body.innerHTML = '';
-                <a href="https://exploit.up.railway.app/exploit.html">Interstellar</a>
-
             } else {
-                message.textContent = 'Incorrect username or password. Please try again.';
+                message.textContent = 'Access denied.';
             }
         }
-    </script>
+	</script>
 </body>
+
 </html>
